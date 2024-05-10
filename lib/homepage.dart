@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.black,
           activeColor: Colors.lightGreenAccent,
           tabBackgroundColor: Colors.black,
-          padding: EdgeInsets.symmetric(horizontal: 35, vertical: 17),
+          padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 17),
           // padding: EdgeInsets.all(8.0),
           onTabChange: (index){
             setState(() {
@@ -68,28 +68,6 @@ class _HomePageState extends State<HomePage> {
       ),
     )
     )
-      // bottomNavigationBar: GNav(
-      //   iconSize: 25,
-      //   gap: 10,
-      //   // backgroundColor: Color(0xff61c768),
-      //     backgroundColor: Colors.lightGreenAccent,
-      //   color: Colors.black,
-      //   // activeColor: Colors.black,
-      //     activeColor: Colors.lightGreenAccent,
-      //   // tabBackgroundColor: Color(0x421c5920),
-      //     tabBackgroundColor: Colors.black,
-      //   padding: EdgeInsets.symmetric(horizontal: 35, vertical: 17),
-      //   onTabChange: (index){
-      //     setState(() {
-      //       _page = index;
-      //     });
-      //   },
-      //   tabs: [
-      //     GButton(icon: Icons.fitness_center, text: "Gym",),
-      //     GButton(icon: Icons.sports_gymnastics, text: "Yoga",),
-      //     GButton(icon: Icons.person, text: "Profile",)
-      //   ]
-      // )
     );
   }
 }

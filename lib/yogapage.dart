@@ -128,79 +128,8 @@ class _YogaPageState extends State<YogaPage> {
                             ),
               ),
                         )
-            // ListView.builder(
-            //         itemCount: allposes.length,
-            //         itemBuilder: (context, index){
-            //           return Card(
-            //             color: Color(0x54c9f6cc),
-            //             margin: EdgeInsets.all(8.0),
-            //             child: ListTile(
-            //               title: Text(allposes[index], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-            //               onTap: () {
-            //                 print("${allposes[index]} tapped");
-            //                 Navigator.push(
-            //                   context,
-            //                   MaterialPageRoute(builder: (context) => YogaCam()),
-            //                 );
-            //               },
-            //             ),
-            //           );
-            //         },
-            //       ),
           ],
         ),
-        // body: Column(
-        //     children: [
-        //       // SizedBox(height: 25,),
-        //       Center(child: Image.asset("img/yogaPg2.jpg", width: MediaQuery.of(context).size.width,)),
-        //       SizedBox(height: 25,),
-        //       Padding(
-        //         padding: const EdgeInsets.only(left: 15),
-        //         child: Container(
-        //           width: 450,
-        //           child: const Align(
-        //             alignment: Alignment.centerLeft,
-        //             child: Text(
-        //                 "Select a yoga pose",
-        //                 style: TextStyle(
-        //                   color: Colors.lightGreenAccent,
-        //                   fontWeight: FontWeight.bold,
-        //                   fontSize: 20,
-        //                 )
-        //             ),
-        //           ),
-        //         ),
-        //       ),
-        //       SizedBox(height: 10,),
-        //       Expanded(
-        //         child: Container(
-        //           // height: MediaQuery.of(context).size.height,
-        //           child: ListView.builder(
-        //             itemCount: allposes.length,
-        //             itemBuilder: (context, index){
-        //               return Card(
-        //                 color: Color(0x54c9f6cc),
-        //                 margin: EdgeInsets.all(8.0),
-        //                 child: ListTile(
-        //                   title: Text(allposes[index], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-        //                   onTap: () {
-        //                     print("${allposes[index]} tapped");
-        //                     Navigator.push(
-        //                       context,
-        //                       MaterialPageRoute(builder: (context) => YogaCam()),
-        //                     );
-        //                     // loadCamera();
-        //                     // loadModel();
-        //                   },
-        //                 ),
-        //               );
-        //             },
-        //           ),
-        //         ),
-        //       )
-        //     ],
-        //   ),
-
     );
   }
 }
