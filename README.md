@@ -1,6 +1,6 @@
 # GoldenOrder-Hackfest24
 
-####Problem Statement:
+###Problem Statement:###
 In today's frantic pace, people struggle to balance numerous responsibilities, leaving little time for fitness. This compromise on health highlights the urgent need foraccessible solutions that seamlessly integrate exercise into busy lifestyles. Time constraints make it essential for options that fit into fragmented schedules. Whether it's a quick workout during a break or a brief yoga session before bed, these solutions must adapt to accommodate limited time. By addressing these constraints,individuals can reclaim control over their well-being, fostering improved fitness and vitality within the relentless whirlwind of modern life.
 
 The simplest solution can be provided via a fitness trainer.
