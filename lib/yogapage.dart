@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hackfest24/poseinfopage.dart';
 
 class YogaPage extends StatefulWidget {
   YogaPage({super.key});
@@ -58,22 +59,21 @@ class _YogaPageState extends State<YogaPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> allposes =[
-      "Alanasana",
-      "Anjaneyasana",
-      "Bakasana",
-      "Balasana",
-      "Bitilasana",
-      "Camatkarasana",
-      "Dhanurasana",
-      "Garudasana",
-      "Halasana",
-      "Hanumanasana",
-      "Malasana",
-      "Marjaryasana",
-      "Navasana",
-      "Padmasana",
-    ];
+    List<String> allposes =["Adho Mukha Svanasana" ,
+    "Anjaneyasana",
+    "Balasana",
+    "Bitilasana",
+    "Garudasana",
+    "Malasana",
+    "Padmasana",
+    "Phalakasana",
+    "Salamba Bhujangasana",
+    "Sivasana",
+    "Trikonasana",
+    "Urdhva Dhanurasana",
+    "Ustrasana",
+      "Uttanasana",];
+
     return Scaffold(
         backgroundColor: Colors.black87,
         body: CustomScrollView(
@@ -114,12 +114,8 @@ class _YogaPageState extends State<YogaPage> {
                                     title: Text(allposes[index], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                                     onTap: () {
                                       print("${allposes[index]} tapped");
-                                      // Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => YogaCam()),
-                                      // );
-                                      // loadCamera();
-                                      // loadModel();
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => PoseInfoPage(pose: allposes[index])),
+                                      );
                                     },
                                   ),
                                 );
