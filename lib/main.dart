@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hackfest24/LoginPage.dart';
 
 import 'authcontroller.dart';
 import 'homepage.dart';
@@ -99,8 +100,8 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: HomePage("")
-      //isLogin ? HomePage(auth.currentUser!.email) : LoginPage(), // Use AuthWrapper as the home widget
+      // home: LoginPage()
+      home: isLogin ? HomePage(auth.currentUser!.email) : LoginPage(), // Use AuthWrapper as the home widget
     );
   }
 }

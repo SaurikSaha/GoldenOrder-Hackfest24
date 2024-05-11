@@ -49,6 +49,7 @@ dependencies:
   image_picker: ^1.0.1
   flutter_image: ^4.1.6
   google_nav_bar: ^5.0.6
+  quickalert:
 
 dev_dependencies:
   flutter_test:

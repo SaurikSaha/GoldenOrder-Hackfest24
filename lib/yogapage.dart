@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hackfest24/yogacam.dart';
 
 class YogaPage extends StatefulWidget {
   YogaPage({super.key});
@@ -115,10 +114,10 @@ class _YogaPageState extends State<YogaPage> {
                                     title: Text(allposes[index], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                                     onTap: () {
                                       print("${allposes[index]} tapped");
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => YogaCam()),
-                                      );
+                                      // Navigator.push(
+                                      //   context,
+                                      //   MaterialPageRoute(builder: (context) => YogaCam()),
+                                      // );
                                       // loadCamera();
                                       // loadModel();
                                     },
