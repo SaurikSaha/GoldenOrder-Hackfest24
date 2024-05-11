@@ -25,8 +25,14 @@ class _SignUpPageState extends State<SignUpPage> {
   var nameController=TextEditingController();
   File? file;
   ImagePicker image = ImagePicker();
+  String? profUrl;
   var url;
   DatabaseReference? dbRef;
+
+  @override
+  void initState(){
+    profUrl='';
+  }
   @override
   Widget build(BuildContext context) {
     double w=MediaQuery.of(context).size.width;
@@ -217,7 +223,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 GestureDetector(
                   onTap: (){
                     if (file != null) {
-                      AuthController.instance.register(context,emailController.text.trim(), passwordController.text.trim());
+                      AuthController.instance.register(context,nameController.text.trim(),emailController.text.trim(), passwordController.text.trim());
                       uploadFile();
                     }
                     else{
@@ -322,39 +328,40 @@ class _SignUpPageState extends State<SignUpPage> {
       var imagefile = FirebaseStorage.instance
           .ref()
           .child("Profile pictures")
-          .child(FirebaseAuth.instance.currentUser!.uid);
+          .child(await FirebaseAuth.instance.currentUser!.uid);
       UploadTask task = imagefile.putFile(file!);
       TaskSnapshot snapshot = await task;
       url = await snapshot.ref.getDownloadURL();
-      // setState(() {
-      //   url = url;
-      // });
-      if (url != null) {
-        Map<String, String> details = {
+
+      setState(() {
+        profUrl = url;
+      });
+      if (profUrl != null) {
+        Map<String, String?> details = {
           'Name': nameController.text.trim(),
           'Email': emailController.text.trim(),
-          'URL': url,
+          'URL': profUrl,
           'Id': FirebaseAuth.instance.currentUser!.uid.toString()
         };
         dbRef=FirebaseDatabase.instance.ref().child("Users");
-        dbRef?.child("${FirebaseAuth.instance.currentUser?.uid}").set(details);
+        // dbRef?.child("${FirebaseAuth.instance.currentUser?.uid}").set(details);
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text("${FirebaseAuth.instance.currentUser?.uid}"),
               backgroundColor: Color(0xff51f05c),
               duration: Duration(seconds: 3),)
         );
         Navigator.pop(context);
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
-        );
-        // dbRef!.push().set(details).whenComplete(() {
-        //   Navigator.pop(context);
-        //   Navigator.push(
-        //     context,
-        //     MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
-        //   );
-        // });
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
+        // );
+        dbRef!.push().set(details).whenComplete(() {
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
+          );
+        });
       }
     } on Exception catch (e) {
       print(e);

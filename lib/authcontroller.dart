@@ -1,5 +1,5 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,12 +32,12 @@ class AuthController extends GetxController{
     }
   }
 
-  register(BuildContext context,String email,String password) async {
+  register(BuildContext context,String name,String email,String password) async {
     try{
       await auth.createUserWithEmailAndPassword(email: email, password: password);
-      Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => HomePage(auth.currentUser!.email.toString())),
-              (route) => false);
+      // Navigator.of(context).pushAndRemoveUntil(
+      //     MaterialPageRoute(builder: (context) => HomePage(auth.currentUser!.email.toString())),
+      //         (route) => false);
 
       // Navigator.pushReplacement(
       //   context,
