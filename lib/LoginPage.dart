@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             width: w,
             height: h*0.3,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xff51f05c), Color(0xff000000)],
                 stops: [0.1, 1],
@@ -50,21 +50,21 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Hello",
+                const Text("Hello",
                   style:TextStyle(
                     color: Colors.white,
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
+                const Text(
                   "Sign into your account",
                   style: TextStyle(
                       fontSize: 15,
                       color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
@@ -86,20 +86,20 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         labelText: "Email",
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                             color: Colors.white70
                         ),
-                        prefixIcon: Icon(Icons.email,color: Color(0xff51f05c),),
+                        prefixIcon: const Icon(Icons.email,color: Color(0xff51f05c),),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.blue,
                               width: 1.0,
                             )
                         ),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                                 color: Color(0xff51f05c),
                                 width: 1.0
                             )
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     )
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
@@ -128,31 +128,31 @@ class _LoginPageState extends State<LoginPage> {
                     child:TextField(
                       controller: passwordController,
                       keyboardType: TextInputType.visiblePassword,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         labelText: "Password",
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                             color: Colors.white70
                         ),
                         suffixIcon:IconButton(
-                          icon:Icon(Icons.remove_red_eye,color: Colors.grey),
+                          icon:const Icon(Icons.remove_red_eye,color: Colors.grey),
                           onPressed:() {
                             setState(() {
                               securetext = !securetext;
                             });
                           },
                         ),
-                        prefixIcon: Icon(Icons.password,color: Color(0xff51f05c),),
+                        prefixIcon: const Icon(Icons.password,color: Color(0xff51f05c),),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.blue,
                               width: 1.0,
                             )
                         ),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                                 color: Color(0xff51f05c),
                                 width: 1.0
                             )
@@ -164,11 +164,11 @@ class _LoginPageState extends State<LoginPage> {
                       obscureText: securetext,
                     )
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(
                   children: [
                     Expanded(child: Container()),
-                    Text(
+                    const Text(
                       "Forgot your password?",
                       style: TextStyle(
                           fontSize: 15,
@@ -181,7 +181,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
           ),
-          SizedBox(height: 50,),
+          const SizedBox(height: 50,),
           GestureDetector(
             onTap: (){
               AuthController.instance.login(context,emailController.text.trim(), passwordController.text.trim());
@@ -191,7 +191,7 @@ class _LoginPageState extends State<LoginPage> {
               height: h*0.075,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
                     colors: [
@@ -199,16 +199,8 @@ class _LoginPageState extends State<LoginPage> {
                       Color(0xFF67E769),
                     ],
                   )
-                // borderRadius: BorderRadius.circular(30),
-                // image: DecorationImage(
-                //   image: AssetImage(
-                //       "img/loginbtn.png"
-                //   ),
-                //   fit: BoxFit.cover,
-                //   filterQuality: FilterQuality.high,
-                // ),
               ),
-              child: Center(
+              child: const Center(
                 child: Text("Sign in",
                   style: TextStyle(
                     fontSize: 25,
@@ -219,11 +211,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(height: 70,),
+          const SizedBox(height: 70,),
           RichText(
               text: TextSpan(
                   text: "Don't have an account?  ",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.normal,
                       color: Colors.white
@@ -238,7 +230,7 @@ class _LoginPageState extends State<LoginPage> {
                           );
                         },
                       text: "Create.",
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF5AEA5C)

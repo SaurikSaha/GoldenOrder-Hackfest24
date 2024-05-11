@@ -100,8 +100,8 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: LoginPage()
-      // home: isLogin ? HomePage(auth.currentUser!.email) : LoginPage(), // Use AuthWrapper as the home widget
+      // home: LoginPage()
+      home: isLogin ? HomePage(auth.currentUser!.email) : LoginPage(), // Use AuthWrapper as the home widget
     );
   }
 }

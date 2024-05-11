@@ -35,14 +35,6 @@ class AuthController extends GetxController{
   register(BuildContext context,String name,String email,String password) async {
     try{
       await auth.createUserWithEmailAndPassword(email: email, password: password);
-      // Navigator.of(context).pushAndRemoveUntil(
-      //     MaterialPageRoute(builder: (context) => HomePage(auth.currentUser!.email.toString())),
-      //         (route) => false);
-
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => HomePage(auth.currentUser!.email.toString())),
-      // );
     }catch(e){
       var s=e.toString();
       ScaffoldMessenger.of(context).showSnackBar(
