@@ -343,19 +343,19 @@ class _SignUpPageState extends State<SignUpPage> {
           'URL': profUrl,
           'Id': FirebaseAuth.instance.currentUser!.uid.toString()
         };
-        dbRef=FirebaseDatabase.instance.ref().child("Users");
+        dbRef=FirebaseDatabase.instance.ref();
         // dbRef?.child("${FirebaseAuth.instance.currentUser?.uid}").set(details);
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text("${FirebaseAuth.instance.currentUser?.uid}"),
               backgroundColor: Color(0xff51f05c),
               duration: Duration(seconds: 3),)
         );
-        Navigator.pop(context);
+        // Navigator.pop(context);
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
         // );
-        dbRef!.push().set(details).whenComplete(() {
+        dbRef!.child("Users").child("${FirebaseAuth.instance.currentUser?.uid}").push().set(details).whenComplete(() {
           Navigator.pop(context);
           Navigator.push(
             context,
