@@ -21,4 +21,8 @@ By utilizing the mobile camera, the app captures live video streams of the user 
 -NumPy
 -SkLearn
 
-
+### Basic Workflow:
+Utilizing mediapipe pose detection model, we extract key points on the human body from video frames. These key points facilitate the identification of the user's stance during exercises. By analyzing these keypoints, the model updates corresponding counter variables for each exercise by keeping track of joint angles while the user moves, and then the counter is updated if the given constraints and conditions are met.
+A trained CNN model is used to detect the posture of the user the judge the correctness of the pose of the user. The user can a pose for a specifc interval of time.
+These models are deployed in the backend using flask to create a local server which receives the images provided by the mobile camera in the app and then processes the images accordingly.
+The mobile app assists the user to choose the exercise he/she wants to perform by the interactive UI provided by the app, clicking on which then initiates the machine learning models deployed in the backend servers.
