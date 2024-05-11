@@ -26,3 +26,6 @@ Utilizing mediapipe pose detection model, we extract key points on the human bod
 A trained CNN model is used to detect the posture of the user the judge the correctness of the pose of the user. The user can a pose for a specifc interval of time.
 These models are deployed in the backend using flask to create a local server which receives the images provided by the mobile camera in the app and then processes the images accordingly.
 The mobile app assists the user to choose the exercise he/she wants to perform by the interactive UI provided by the app, clicking on which then initiates the machine learning models deployed in the backend servers.
+
+### User Interface:
+![WhatsApp Image 2024-05-11 at 05 51 18_6a0f0c85](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/138333445/cabc8ba2-14d4-4c9c-bc63-165899d1a590)
