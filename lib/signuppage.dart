@@ -345,11 +345,11 @@ class _SignUpPageState extends State<SignUpPage> {
         };
         dbRef=FirebaseDatabase.instance.ref();
         // dbRef?.child("${FirebaseAuth.instance.currentUser?.uid}").set(details);
-        ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("${FirebaseAuth.instance.currentUser?.uid}"),
-              backgroundColor: Color(0xff51f05c),
-              duration: Duration(seconds: 3),)
-        );
+        // ScaffoldMessenger.of(context).showSnackBar(
+        //     SnackBar(content: Text("${FirebaseAuth.instance.currentUser?.uid}"),
+        //       backgroundColor: Color(0xff51f05c),
+        //       duration: Duration(seconds: 3),)
+        // );
         // Navigator.pop(context);
         // Navigator.push(
         //   context,

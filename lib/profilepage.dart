@@ -28,10 +28,10 @@ class _ProfilePageState extends State<ProfilePage> {
     // final dataMap= snapshot.value as Map<String,String>;
     if (snapshot.exists) {
       print("xxxxx");
-      Map<String, dynamic>? userData = snapshot.value as Map<String, dynamic>?;
-      print("zzzz");
-      String name = userData?['Name'];
-      print("nm: "+name);
+      // Map<String, String> userData = snapshot.value!();
+      for(DataSnapshot snap in snapshot.children)
+      print("zzzz "+snap.child('Name').value.toString());
+
       // final dataMap = snapshot.value as Map;
       //
       // dataMap.forEach((key, value) {
