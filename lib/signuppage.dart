@@ -79,16 +79,16 @@ class _SignUpPageState extends State<SignUpPage> {
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.black,
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //     blurRadius: 10,
-                      //     spreadRadius: 5,
-                      //     offset: Offset(1,1),
-                      //     color: Colors.grey.withOpacity(0.7)
-                      //   )
-                      // ]
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                              offset: Offset(1,1),
+                              color: Colors.grey.withOpacity(0.7)
+                          )
+                        ]
                     ),
                     child:TextField(
                       controller: nameController,
@@ -124,16 +124,16 @@ class _SignUpPageState extends State<SignUpPage> {
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.black,
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //     blurRadius: 10,
-                      //     spreadRadius: 5,
-                      //     offset: Offset(1,1),
-                      //     color: Colors.grey.withOpacity(0.7)
-                      //   )
-                      // ]
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                              offset: Offset(1,1),
+                              color: Colors.grey.withOpacity(0.7)
+                          )
+                        ]
                     ),
                     child:TextField(
                       controller: emailController,
@@ -169,16 +169,16 @@ class _SignUpPageState extends State<SignUpPage> {
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.black,
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       blurRadius: 10,
-                      //       spreadRadius: 5,
-                      //       offset: Offset(1,1),
-                      //       color: Colors.grey.withOpacity(0.7)
-                      //   )
-                      // ]
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                              offset: Offset(1,1),
+                              color: Colors.grey.withOpacity(0.7)
+                          )
+                        ]
                     ),
                     child:TextField(
                       controller: passwordController,
@@ -260,51 +260,51 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 SizedBox(height: 70,),
-                RichText(text: TextSpan(
-                    text: "Sign up using the following.",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white70
-                    ),
-                )),
-                SizedBox(height: 20,),
-                Wrap(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          // Handle the onTap event for the first CircleAvatar here
-                          // For example, you can navigate to a new page or show a dialog.
-                          AuthController.instance.signInWithGoogle(context);
-                        },
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.grey,
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundImage: AssetImage(images[0]), // Assuming images[0] is the image for the first element
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Now generate the rest of the CircleAvatars starting from index 1
-                    ...List<Widget>.generate(2, (index) {
-                      return Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.grey,
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundImage: AssetImage(images[index + 1]), // Start from index 1
-                          ),
-                        ),
-                      );
-                    }),
-                  ],
-                )
+                // RichText(text: TextSpan(
+                //     text: "Sign up using the following.",
+                //     style: TextStyle(
+                //         fontSize: 20,
+                //         fontWeight: FontWeight.normal,
+                //         color: Colors.white70
+                //     ),
+                // )),
+                // SizedBox(height: 20,),
+                // Wrap(
+                //   children: [
+                //     Padding(
+                //       padding: EdgeInsets.all(10.0),
+                //       child: GestureDetector(
+                //         onTap: () {
+                //           // Handle the onTap event for the first CircleAvatar here
+                //           // For example, you can navigate to a new page or show a dialog.
+                //           AuthController.instance.signInWithGoogle(context);
+                //         },
+                //         child: CircleAvatar(
+                //           radius: 30,
+                //           backgroundColor: Colors.grey,
+                //           child: CircleAvatar(
+                //             radius: 25,
+                //             backgroundImage: AssetImage(images[0]), // Assuming images[0] is the image for the first element
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //     // Now generate the rest of the CircleAvatars starting from index 1
+                //     ...List<Widget>.generate(2, (index) {
+                //       return Padding(
+                //         padding: EdgeInsets.all(10.0),
+                //         child: CircleAvatar(
+                //           radius: 30,
+                //           backgroundColor: Colors.grey,
+                //           child: CircleAvatar(
+                //             radius: 25,
+                //             backgroundImage: AssetImage(images[index + 1]), // Start from index 1
+                //           ),
+                //         ),
+                //       );
+                //     }),
+                //   ],
+                // )
               ],
             ),
 
@@ -361,13 +361,13 @@ class _SignUpPageState extends State<SignUpPage> {
         //   context,
         //   MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
         // );
-        dbRef!.child("Users").child("${FirebaseAuth.instance.currentUser?.uid}").push().set(details).whenComplete(() {
-          Navigator.pop(context);
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
-          );
-        });
+        // dbRef!.child("Users").child("${FirebaseAuth.instance.currentUser?.uid}").push().set(details).whenComplete(() {
+        //   Navigator.pop(context);
+        //   Navigator.push(
+        //     context,
+        //     MaterialPageRoute(builder: (context) => HomePage(FirebaseAuth.instance.currentUser!.uid.toString())),
+        //   );
+        // });
       }
     } on Exception catch (e) {
       print(e);

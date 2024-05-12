@@ -68,8 +68,16 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                     height: 60,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.black
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              spreadRadius: 5,
+                              offset: Offset(1,1),
+                              color: Colors.grey.withOpacity(0.7)
+                          )
+                        ]
                     ),
                     child:TextField(
                       controller: emailController,
@@ -107,14 +115,14 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.black,
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       blurRadius: 10,
-                      //       spreadRadius: 5,
-                      //       offset: Offset(1,1),
-                      //       color: Colors.grey.withOpacity(0.7)
-                      //   )
-                      // ]
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 10,
+                            spreadRadius: 5,
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.7)
+                        )
+                      ]
                     ),
                     child:TextField(
                       controller: passwordController,
@@ -160,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Expanded(child: Container()),
                     const Text(
-                      "Forgot your password?",
+                      " ",
                       style: TextStyle(
                           fontSize: 15,
                           color: Colors.white70
