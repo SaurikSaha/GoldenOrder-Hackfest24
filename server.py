@@ -1048,7 +1048,7 @@ def start_camera7():
     predictions = predictions * zeros
     predicted_class = labels[np.argmax(predictions)]
 
-    
+    #Frames 
     print(f"Predicted Class: {predicted_class}")
     for i in range(5):
             # alpha , beta = cap.read()
@@ -1062,125 +1062,125 @@ def start_camera7():
     c1 = int(c1)
     if pose=="Adho Mukha Svanasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         elif predicted_class == "Ardha Pincha Mayurasana":
-            cv2.putText(temp, "Keep your hands straight", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Keep your hands straight", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip: Try to make a mountain with your", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
-            cv2.putText(temp, "hands and knees straight", (10,665), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip: Try to make a mountain with your", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "hands and knees straight", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
             
     if pose == "Anjaneyasana":
         if predicted_class == pose or predicted_class == "Alanasana" or predicted_class == "Ashta Chandrasana" :
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip: Try to make a crescent moon by fully  ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
-            cv2.putText(temp, "stretching your arms and legs", (10,665), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip: Try to make a crescent moon by fully  ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "stretching your arms and legs", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
             
     
     if pose == "Balasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip: Lean forward, keeping your buttocks on your heels, ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
-            cv2.putText(temp, "and rest your forehead on the floor.", (10,665), 1, 1, (20,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip: Lean forward, keeping your buttocks on your heels, ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "and rest your forehead on the floor.", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
     if pose=="Bitilasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         elif predicted_class == "Marjaryasana":
-            cv2.putText(temp,"Keep your back straight", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Keep your back straight", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else :
-            cv2.putText(temp, "Tip : Bend over like a cow, ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Bend over like a cow, ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
             #cv2.putText(temp, "and rest your forehead on the floor.", (10,665), 1, 1, (101,69,237),1, cv2.LINE_AA)
  
 
     if pose == "Garudasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         elif predicted_class == "Vrksasana":
-            cv2.putText(temp,"Keep your legs straight", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Keep your legs straight", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else :
-            cv2.putText(temp, "Tip : Join both hands together and stand straight ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Join both hands together and stand straight ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
             #cv2.putText(temp, "and rest your forehead on the floor.", (10,665), 1, 1, (101,69,237),1, cv2.LINE_AA)
 
     
     if pose == "Malasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else :
-            cv2.putText(temp, "Tip : Keep your spine straight and your shoulders down  ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
-            cv2.putText(temp, " away from your ears as you squat ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Keep your spine straight and your shoulders down  ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, " away from your ears as you squat ", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
     if pose=="Padmasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else :
-            cv2.putText(temp, "Tip : Sit down and cross your legs with each ankle on opposite thigh ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
-            cv2.putText(temp, "and keep your back straight ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Sit down and cross your legs with each ankle on opposite thigh ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "and keep your back straight ", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
     if pose == "Phalakasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip : Get down in push up position and hold. ", (10,650), 1, 1, (0,0,255),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Get down in push up position and hold. ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
     
     if pose == "Salamba Bhujangasana":
         if predicted_class == pose or predicted_class == "Urdhva Mukha Svsnssana":
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else :
-            cv2.putText(temp, "Tip : Lie down face down with legs straight ,  ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, "place hands near you chest and lift upper body. ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Lie down face down with legs straight ,  ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "place hands near you chest and lift upper body. ", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
         
     if pose=="Sivasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip : Lay on your back with palms facing upwards , ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, " keeping your hands close to your body.", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Lay on your back with palms facing upwards , ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, " keeping your hands close to your body.", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
 
 
     if pose == "Trikonasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         elif predicted_class == "Vasisthasana":
-            cv2.putText(temp,"Keep your legs apart", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Keep your legs apart", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
             cv2.putText(temp, "Tip :Keep your legs apart with one hand touching the ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, "front feet and the other hand pointing up.", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "front feet and the other hand pointing up.", (10,665), 1, 1, (101,69,237),1, cv2.LINE_AA)
 
             
     if pose == "Urdhva Dhanurasana":
         if predicted_class == pose:
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         elif predicted_class == "Camatkarasana":
-            cv2.putText(temp,"Keep both hands on ground and feet together", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)       
+            cv2.putText(temp,"Keep both hands on ground and feet together", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)       
         else:
-            cv2.putText(temp, "Tip :Lie on your back wiht palms on the groung", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, "near you neck and lift body up making an arc.", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip :Lie on your back wiht palms on the groung", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "near you neck and lift body up making an arc.", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
 
     if pose == "Ustrasana":
         if predicted_class == pose :
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip : Sit on knees and touch you heels  ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, "arching you front body.", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip : Sit on knees and touch you heels  ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "arching you front body.", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
     if pose == "Uttanasana":
         if predicted_class == pose or predicted_class == "Paschimottanasana":
-            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,0,0),1, cv2.LINE_AA)
+            cv2.putText(temp,"Stance Correctness: " + str(c1) + "%", (130,25), 1, 1, (0,255,25),1, cv2.LINE_AA)
         else:
-            cv2.putText(temp, "Tip :Keeping legs straight and try touching  ", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
-            cv2.putText(temp, "your knees with forehead.", (10,650), 1, 1, (101,69,237),1, cv2.LINE_AA)
+            cv2.putText(temp, "Tip :Keeping legs straight and try touching  ", (10,650), 1, 1, (0,255,25),1, cv2.LINE_AA)
+            cv2.putText(temp, "your knees with forehead.", (10,665), 1, 1, (0,255,25),1, cv2.LINE_AA)
 
     
     # if pose == predicted_class and predicted_class == "Adho Mukha Svanasana" and c1>70 and c1<86 :
