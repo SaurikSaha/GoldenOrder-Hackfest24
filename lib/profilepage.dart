@@ -3,6 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackfest24/LoginPage.dart';
+import 'package:hackfest24/dailygoalpage.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -72,7 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         CircleAvatar(
                           radius: 60,
                           backgroundColor: Colors.white70,
-                          backgroundImage: NetworkImage(imgUrl),
+                          backgroundImage: NetworkImage(imgUrl,),
                         ),
                         SizedBox(height: 20,),
                         Padding(
@@ -97,7 +98,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                             height: 60,
                             width: 325,
-                            child: Center(child: Text("Email:    "+useremail, textAlign: TextAlign.left,style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)),
+                            child: Center(child: Text("Email: "+useremail, textAlign: TextAlign.left,style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)),
                           ),
                         ),
                         SizedBox(height: 55,),
@@ -127,7 +128,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             child: const Center(
                               child: Text("Log out",
                                 style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
@@ -136,6 +137,39 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 60,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DailyGoalPage()),
+                    );
+                  },
+                  child:Container(
+                    width: 185,
+                    height: 65,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        gradient: const LinearGradient(
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                          colors: [
+                            Color(0xFF5AEA5C),
+                            Color(0xFF67E769),
+                          ],
+                        )
+                    ),
+                    child: const Center(
+                      child: Text("Set daily goals",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                 ),

@@ -38,37 +38,37 @@ class _HomePageState extends State<HomePage> {
           )
       ),
         body:screens[_page],
-    bottomNavigationBar:Container(
-      color: Colors.lightGreenAccent,
-      child:Padding(
-        padding: const EdgeInsets.symmetric(horizontal:2, vertical:5),
-        child: GNav(
-          gap: 10,
-          backgroundColor: Colors.lightGreenAccent,
-          color: Colors.black,
-          activeColor: Colors.lightGreenAccent,
-          tabBackgroundColor: Colors.black,
-          padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 17),
-          // padding: EdgeInsets.all(8.0),
-          onTabChange: (index){
-            setState(() {
-              _page = index;
-          });
-      },
-      tabs: const [
-        GButton(
-          icon: Icons.fitness_center,
-          text: "Gym",),
-        GButton(
-          icon: Icons.sports_gymnastics,
-          text: "Yoga",),
-        GButton(
-          icon: Icons.person,
-          text: "Profile",),
-        ],
-      ),
-    )
-    )
+        bottomNavigationBar:Container(
+          color: Colors.lightGreenAccent,
+          child:Padding(
+            padding: const EdgeInsets.symmetric(horizontal:2, vertical:5),
+            child: GNav(
+              gap: 10,
+              backgroundColor: Colors.lightGreenAccent,
+              color: Colors.black,
+              activeColor: Colors.lightGreenAccent,
+              tabBackgroundColor: Colors.black,
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 17),
+              // padding: EdgeInsets.all(8.0),
+              onTabChange: (index){
+                setState(() {
+                  _page = index;
+              });
+          },
+          tabs: const [
+            GButton(
+              icon: Icons.fitness_center,
+              text: "Gym",),
+            GButton(
+              icon: Icons.sports_gymnastics,
+              text: "Yoga",),
+            GButton(
+              icon: Icons.person,
+              text: "Profile",),
+            ],
+          ),
+        )
+        )
     );
   }
 }

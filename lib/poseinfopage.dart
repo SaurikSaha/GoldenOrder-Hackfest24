@@ -47,7 +47,8 @@ class _PoseInfoPageState extends State<PoseInfoPage> {
               Text("GymBuddy", style: TextStyle(
                   color: Colors.black, fontWeight: FontWeight.bold),)
             ],
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       body:
       Center(

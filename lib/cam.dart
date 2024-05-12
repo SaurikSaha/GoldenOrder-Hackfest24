@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:http/http.dart' as http;
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,18 +26,35 @@ class _CamPageState extends State<CamPage> {
   String _processedImage = '';
   dynamic responseData;
   int reset=1;
+  String target="-1";
 
   @override
   void initState(){
     super.initState();
     exercise=widget.exercise;
+    fetch();
     initCamera();
+  }
+
+  Future<void> fetch() async {
+    final userId = FirebaseAuth.instance.currentUser?.uid;
+    final ref = FirebaseDatabase.instance.ref();
+    final snapshot = await ref.child('Users').child(userId.toString()).get();
+    if (snapshot.exists) {
+      for(DataSnapshot snap in snapshot.children){
+        setState(() {
+          target = snap.child('${exercise}').value.toString();
+        });
+      }
+    }else {
+      print('No data available.');
+    }
   }
 
   void showAlert(){
     QuickAlert.show(
       context: context,
-      title: "Kurls",
+      title: exercise.toUpperCase(),
       text: "Daily goal achieved",
       type: QuickAlertType.success
     );
@@ -56,7 +75,7 @@ class _CamPageState extends State<CamPage> {
     }
     XFile image = await _controller.takePicture();
     Uint8List imageBytes = await image.readAsBytes();
-    String apiUrl = 'http://192.168.145.103:5000/${exercise}?target=1&reset=${reset}';
+    String apiUrl = 'http://192.168.246.6:5000/${exercise}?target=${target}&reset=${reset}';
     print('Sending image to API: $apiUrl');
     final response= await http.post(
       Uri.parse(apiUrl),

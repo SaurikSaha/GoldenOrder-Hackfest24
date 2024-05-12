@@ -70,15 +70,6 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.black
-
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //     blurRadius: 10,
-                      //     spreadRadius: 5,
-                      //     offset: Offset(1,1),
-                      //     color: Colors.grey.withOpacity(0.7)
-                      //   )
-                      // ]
                     ),
                     child:TextField(
                       controller: emailController,
