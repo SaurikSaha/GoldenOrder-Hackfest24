@@ -64,12 +64,12 @@ class _DailyGoalPageState extends State<DailyGoalPage> {
       'Email':'',
       'URL':'',
       'Id':'',
-      'curls':(curlsController.text=='Not yet set')?'0':curlsController.text,
-      'pushups':(pushupsController.text=='Not yet set')?'0':pushupsController.text,
-      'pullups':(pullupsController.text=='Not yet set')?'0':pullupsController.text,
-      'squats':(squatsController.text=='Not yet set')?'0':squatsController.text,
-      'situps':(situpsController.text=='Not yet set')?'0':situpsController.text,
-      'jumpingjacks':(jumpingJacksController.text=='Not yet set')?'0':jumpingJacksController.text
+      'curls':(curlsController.text=='Not yet set' || curlsController.text=='')?'0':curlsController.text,
+      'pushups':(pushupsController.text=='Not yet set' || curlsController.text=='')?'0':pushupsController.text,
+      'pullups':(pullupsController.text=='Not yet set' || curlsController.text=='')?'0':pullupsController.text,
+      'squats':(squatsController.text=='Not yet set' || curlsController.text=='')?'0':squatsController.text,
+      'situps':(situpsController.text=='Not yet set' || curlsController.text=='')?'0':situpsController.text,
+      'jumpingjacks':(jumpingJacksController.text=='Not yet set' || curlsController.text=='')?'0':jumpingJacksController.text
     };
 
     dbRef = FirebaseDatabase.instance.ref();
