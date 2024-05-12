@@ -33,7 +33,6 @@ class _CamPageState extends State<CamPage> {
     super.initState();
     exercise=widget.exercise;
     fetch();
-    initCamera();
   }
 
   Future<void> fetch() async {
@@ -44,11 +43,27 @@ class _CamPageState extends State<CamPage> {
       for(DataSnapshot snap in snapshot.children){
         setState(() {
           target = snap.child('${exercise}').value.toString();
+          if(target=='0'){
+            Navigator.pop(context);
+            showNegativeAlert();
+
+          }else{
+            initCamera();
+          }
         });
       }
     }else {
       print('No data available.');
     }
+  }
+
+  void showNegativeAlert(){
+    QuickAlert.show(
+        context: context,
+        title: exercise.toUpperCase(),
+        text: "Target cannot be zero",
+        type: QuickAlertType.error
+    );
   }
 
   void showAlert(){

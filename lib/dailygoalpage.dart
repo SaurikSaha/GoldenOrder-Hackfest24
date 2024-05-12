@@ -34,12 +34,12 @@ class _DailyGoalPageState extends State<DailyGoalPage> {
           situpsController.text = snap.child('situps').value.toString();
           jumpingJacksController.text = snap.child('jumpingjacks').value.toString();
 
-          if(curlsController.text == '-1'){curlsController.text = '0';}
-          if(squatsController.text == '-1'){squatsController.text = '0';}
-          if(pushupsController.text == '-1'){pushupsController.text = '0';}
-          if(pullupsController.text == '-1'){pullupsController.text = '0';}
-          if(situpsController.text == '-1'){situpsController.text = '0';}
-          if(jumpingJacksController.text == '-1'){jumpingJacksController.text = '0';}
+          if(curlsController.text == '0'){curlsController.text = 'Not yet set';}
+          if(squatsController.text == '0'){squatsController.text = 'Not yet set';}
+          if(pushupsController.text == '0'){pushupsController.text = 'Not yet set';}
+          if(pullupsController.text == '0'){pullupsController.text = 'Not yet set';}
+          if(situpsController.text == '0'){situpsController.text = 'Not yet set';}
+          if(jumpingJacksController.text == '0'){jumpingJacksController.text = 'Not yet set';}
 
         });
       }
@@ -64,12 +64,12 @@ class _DailyGoalPageState extends State<DailyGoalPage> {
       'Email':'',
       'URL':'',
       'Id':'',
-      'curls':curlsController.text,
-      'pushups':pushupsController.text,
-      'pullups':pullupsController.text,
-      'squats':squatsController.text,
-      'situps':situpsController.text,
-      'jumpingjacks':jumpingJacksController.text
+      'curls':(curlsController.text=='Not yet set')?'0':curlsController.text,
+      'pushups':(pushupsController.text=='Not yet set')?'0':pushupsController.text,
+      'pullups':(pullupsController.text=='Not yet set')?'0':pullupsController.text,
+      'squats':(squatsController.text=='Not yet set')?'0':squatsController.text,
+      'situps':(situpsController.text=='Not yet set')?'0':situpsController.text,
+      'jumpingjacks':(jumpingJacksController.text=='Not yet set')?'0':jumpingJacksController.text
     };
 
     dbRef = FirebaseDatabase.instance.ref();

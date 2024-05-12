@@ -342,12 +342,12 @@ class _SignUpPageState extends State<SignUpPage> {
           'Email': emailController.text.trim(),
           'URL': profUrl,
           'Id': FirebaseAuth.instance.currentUser!.uid.toString(),
-          'curls':'-1',
-          'pushups':'-1',
-          'pullups':'-1',
-          'squats':'-1',
-          'situps':'-1',
-          'jumpingjacks':'-1'
+          'curls':'0',
+          'pushups':'0',
+          'pullups':'0',
+          'squats':'0',
+          'situps':'0',
+          'jumpingjacks':'0'
         };
         dbRef=FirebaseDatabase.instance.ref();
         // dbRef?.child("${FirebaseAuth.instance.currentUser?.uid}").set(details);

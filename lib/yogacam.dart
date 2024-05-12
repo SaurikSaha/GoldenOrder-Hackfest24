@@ -47,7 +47,7 @@ class _YogaCamState extends State<YogaCam> {
     }
     XFile image = await _controller.takePicture();
     Uint8List imageBytes = await image.readAsBytes();
-    String apiUrl = 'http://192.168.145.6:5000/yoga?pose=${pose}';
+    String apiUrl = 'http://192.168.246.6:5000/yoga?pose=${pose}';
     print('Sending image to API: $apiUrl');
     final response= await http.post(
       Uri.parse(apiUrl),

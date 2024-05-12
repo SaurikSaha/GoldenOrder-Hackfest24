@@ -84,7 +84,7 @@ class _PoseInfoPageState extends State<PoseInfoPage> {
                   backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                   foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
                 ),
-                child: Text('Press Me'),
+                child: Text(' Start camera '),
               ),
             ),
           ),
