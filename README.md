@@ -28,9 +28,11 @@ These models are deployed in the backend using flask to create a local server wh
 The mobile application provides an interactive UI which assists the users to choose the exercise they want to perform, clicking on which initiates the machine learning models deployed in the backend servers.
 
 ### User Interface:
-![WhatsApp Image 2024-05-29 at 00 04 00_b81e8cb9](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/0a838345-5449-4afb-a5c8-4e9cc11ac57f)
-![WhatsApp Image 2024-05-29 at 00 04 01_22bb74d7](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/555ff13d-dad9-4580-9aa4-5ef92686866a)
-![WhatsApp Image 2024-05-29 at 00 04 01_5ca4fd5a](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/c1b0dcf8-77bb-42e4-9409-0eb20919e91a)
-![WhatsApp Image 2024-05-29 at 00 04 02_827c4707](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/06bc8517-5e07-4c29-a971-a4af7cf8b2a7)
-![WhatsApp Image 2024-05-29 at 00 04 00_fe884e5e](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/16f42864-8487-45f9-b323-7c9ce4fe3d1c)
-![WhatsApp Image 2024-05-29 at 00 04 02_9558906d](https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/ee5ef862-dda1-4009-904b-d616b233c1c0)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/0a838345-5449-4afb-a5c8-4e9cc11ac57f" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/555ff13d-dad9-4580-9aa4-5ef92686866a" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/c1b0dcf8-77bb-42e4-9409-0eb20919e91a" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/06bc8517-5e07-4c29-a971-a4af7cf8b2a7" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/16f42864-8487-45f9-b323-7c9ce4fe3d1c" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/ee5ef862-dda1-4009-904b-d616b233c1c0" alt="App Screenshot" width="200">
+</div>
