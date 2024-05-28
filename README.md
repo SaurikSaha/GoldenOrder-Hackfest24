@@ -31,8 +31,10 @@ The mobile application provides an interactive UI which assists the users to cho
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/0a838345-5449-4afb-a5c8-4e9cc11ac57f" alt="App Screenshot" width="200">
   <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/555ff13d-dad9-4580-9aa4-5ef92686866a" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125958574/0cd45afa-b2c0-4f8e-bb24-4f19a8e1a752" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125958574/16383cb5-57d2-4fae-90a6-183be48d63ad" alt="App Screenshot" width="200">
   <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/c1b0dcf8-77bb-42e4-9409-0eb20919e91a" alt="App Screenshot" width="200">
+  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125958574/5fdb8a81-49f0-467b-8bd1-67480589f6ea" alt="App Screenshot" width="200">
   <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/06bc8517-5e07-4c29-a971-a4af7cf8b2a7" alt="App Screenshot" width="200">
   <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/16f42864-8487-45f9-b323-7c9ce4fe3d1c" alt="App Screenshot" width="200">
-  <img src="https://github.com/SaurikSaha/GoldenOrder-Hackfest24/assets/125977973/ee5ef862-dda1-4009-904b-d616b233c1c0" alt="App Screenshot" width="200">
 </div>
